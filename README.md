@@ -14,7 +14,7 @@ In general, more information can be represented in StationXML than SEED; a conve
 Nearly all information in SEED can be represented in StationXML, in most cases such a conversion is loss-free; the reverse conversion will likely not recover the exact same SEED due to minor structural changes but information loss is not expected in most cases.
 
 
-h2. Usage
+Usage
 
 <pre>
 Usage: java -jar stationxml-converter.jar -s|-x [OPTIONS] [FILE|URL]...
@@ -36,4 +36,14 @@ Other options:
 
 -i,--input <arg>   Process all URLs or files listed in specified file
 -o,--output <arg>  Save converted results to specified file, default is stdout
+</pre>
+
+
+Return codes
+<pre>
+Exit Status	      Description
+0	                Successfully processed request, data returned via stdout
+1	                General error. An error description may be provided on stderr
+2	                No data.      Request was successful but results in no data
+3	                Invalid or unsupported argument/parameter
 </pre>
